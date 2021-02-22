@@ -1,6 +1,6 @@
 {
   "name": "nl-promise",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "nl-promise",
   "keywords": [
     "typescript",
@@ -12,7 +12,7 @@
   "repository": "https://github.com/ll84273096/nl-promise",
   "license": "MIT",
   "main": "dist/index.js",
-  "typings": "dist/types/ts/index.d.ts",
+  "typings": "dist/types/index.d.ts",
   "bugs": {
     "url": "https://github.com/ll84273096/nl-promise/issues",
     "email": "ll84273096@sina.com"
