@@ -36,7 +36,7 @@ describe('Test Progress for ProgressPromises', function(): void {
             progress(1);
             progress(1);
             progress(1);
-        }).then(null, null, (data): void => {
+        }).then(null, null, (): void => {
             count++;
         });
         setTimeout((): void => {
