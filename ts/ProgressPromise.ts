@@ -42,14 +42,14 @@ export class ProgressPromise extends Promise {
     }
 
     private _progress(data: any): void {
-        setTimeout((): void => {
-            if (this.state === PromiseState.PENDING) {
+        if (this.state === PromiseState.PENDING) {
+            setTimeout((): void => {
                 this._arrProgress.forEach((progressObj: ProgressObj): void => {
                     progressObj.onProgress(data);
                     progressObj.progress(data);
                 });
-            }
-        });
+            });
+        }
     }
 }
 
