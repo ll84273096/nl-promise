@@ -45,8 +45,12 @@ export class ProgressPromise extends Promise {
         if (this.state === PromiseState.PENDING) {
             setTimeout((): void => {
                 this._arrProgress.forEach((progressObj: ProgressObj): void => {
-                    progressObj.onProgress(data);
-                    progressObj.progress(data);
+                    if (typeof progressObj.onProgress === 'function') {
+                        progressObj.onProgress(data);
+                    }
+                    if (typeof progressObj.progress === 'function') {
+                        progressObj.progress(data);
+                    }
                 });
             });
         }
